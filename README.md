@@ -11,6 +11,6 @@ Welcome to the Spotify Clone project! This is a web-based music player that mimi
 
 ## Live Demo
 
-You can try out the live demo of the project [https://spotifystreamer.netlify.app](link-to-live-demo).
+You can try out the live demo of the project [https://spotifystreamer.netlify.app](https://spotifystreamer.netlify.app).
 
 
