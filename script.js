@@ -38,7 +38,7 @@ const makeAllPlays = () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    masterPlay.textContent = '▶'; // Set initial state to play
+    masterPlay.textContent = '▶'; 
 });
 
 
@@ -52,23 +52,23 @@ document.querySelectorAll('.play-button').forEach(button => {
         if (currentPlayButton === clickedPlayButton) {
             if (audioElement.paused) {
                 audioElement.play();
-                clickedPlayButton.textContent = '❚❚'; // Pause icon
-                masterPlay.textContent = '❚❚'; // Pause icon
+                clickedPlayButton.textContent = '❚❚'; 
+                masterPlay.textContent = '❚❚'; 
                 gif.style.opacity = 1;
             } else {
                 audioElement.pause();
-                clickedPlayButton.textContent = '▶'; // Play icon
-                masterPlay.textContent = '▶'; // Play icon
+                clickedPlayButton.textContent = '▶'; 
+                masterPlay.textContent = '▶'; 
                 gif.style.opacity = 0;
             }
             return;
         }
 
         if (currentPlayButton) {
-            currentPlayButton.textContent = '▶'; // Reset previous button to play
+            currentPlayButton.textContent = '▶'; 
         }
 
-        clickedPlayButton.textContent = '❚❚'; // Set current button to pause
+        clickedPlayButton.textContent = '❚❚'; 
 
         songIndex = parseInt(id);
         audioElement.src = songs[songIndex].filePath;
@@ -76,7 +76,7 @@ document.querySelectorAll('.play-button').forEach(button => {
         audioElement.currentTime = 0;
         audioElement.play();
         gif.style.opacity = 1;
-        masterPlay.textContent = '❚❚'; // Set master button to pause
+        masterPlay.textContent = '❚❚'; 
 
         currentPlayButton = clickedPlayButton;
     });
@@ -85,11 +85,11 @@ document.querySelectorAll('.play-button').forEach(button => {
 masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
-        masterPlay.textContent = '❚❚'; // Set to pause
+        masterPlay.textContent = '❚❚'; 
         gif.style.opacity = 1;
     } else {
         audioElement.pause();
-        masterPlay.textContent = '▶'; // Set to play
+        masterPlay.textContent = '▶'; 
         gif.style.opacity = 0;
     }
 });
@@ -125,14 +125,14 @@ document.getElementById('previous').addEventListener('click', () => {
 });
 
 
-// Existing code...
+
 
 let volumeControl = document.getElementById('volumeControl');
 
-// Set initial volume
+
 audioElement.volume = volumeControl.value / 100;
 
-// Event listener for volume control
+
 volumeControl.addEventListener('input', () => {
     audioElement.volume = volumeControl.value / 100;
 });
