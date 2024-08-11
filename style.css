@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body{
-    background-color: antiquewhite;
+    background-color: rgb(41, 166, 216);
 }
 
 *{
@@ -23,6 +23,16 @@ nav ul{
     color: white;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White color for links */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #1db954;
+  
+}
 nav ul li{
     padding: 0 12px;
 }
@@ -187,5 +197,6 @@ nav ul li{
 
 #volumeControl {
     width: 100px; 
-    margin: 0 10px;
+    margin: 0 20px;
+    margin-bottom: 30px;
 }
